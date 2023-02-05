@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#426098" />
+    <link rel="shortcut icon" href="file:///D:/DOWNLOADS/yt1xazgdpqi91.png" type="image/webp">
+    <meta name="title" content="Kira.dev" />
+    <meta name="description" content="Bio or something" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kira | Bio</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,600,700"
+          rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/cf16def632.js"
+            crossorigin="anonymous"
+            defer></script>
+    </div>
+    <div class="right-image-post">
+        <div class="row">
+            <br>
+            <div class="col-md-6">
+                <div class="left-text">
+                    <h4><i class="fa-brands fa-spotify"></i> MySpotifyList</h4>
+                    <p>
+                        My wife’s playlist ✋🏻.
+                    </p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3qMM8Rjsho06cHN54Is6qp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+            <br>
+            <img alt="Lanyard" src="https://lanyard.kyrie25.me/api/794894645666512907?borderRadius=30px">
+        </div>
+        <div class="mt-24">
+</head>
+<body>
+    <div class="margin-content">
+        <div class="box">
+            <img class="pfp"
+                 src="https://avatars.githubusercontent.com/u/108597754?s=400&u=75fdce0fb0c086b157f1618601e024dd1ee3a994&v=4" />
+            <h1 style="margin: 0">
+                <span class="gradient-txt">Kira</span>
+            </h1>
+            <p class="under-txt" style="margin-bottom: 6">Back to the grind</p>
+            <p id="discord-status"></p>
+            <div class="links">
+                <a href="https://open.spotify.com/user/y9qsytvybuj03c1394s6qnrvb"
+                   class="grey-link">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+                <a href="https://discord.gg/4j2CRzXCXA" class="grey-link">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://enka.network/u/831476174" class="grey-link">
+                    <img src="enka.svg" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCva_lgM1fCIVhttO_XYS46g" class="grey-link">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://twitter.com/eulasimpforever" class="grey-link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <style>
+        .selected {
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .fa-heart {
+            color: red;
+        }
+    </style>
+
+    <footer class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <p class="text-sm font-semibold">&copy; 2023 Kira</p>
+                <p class="text-sm font-semibold text-gray-300">Welcome To My Soul Society.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="inf"></div>
+</body>
+  <script defer>
+    const status = document.getElementById("discord-status");
+    const pfp = document.getElementsByClassName("pfp")[0];
+      fetch("https://api.lanyard.rest/v1/users/794894645666512907")
+      .then((res) => res.json())
+      .then((af) => {
+        let discordstatus = [];
+
+        af.data.activities.forEach((lonelil) => {
+          let name = lonelil.name || null;
+          let details = lonelil.details || null;
+          let state = lonelil.state || null;
+          discordstatus.push(`${name}
+          ${details}
+          ${state}
+          `);
+        });
+        pfp.style.border = `3px solid #${
+          af.data.discord_status == "online"
+            ? "3ba55d"
+            : af.data.discord_status == "idle"
+            ? "faa819"
+            : af.data.discord_status == "dnd"
+            ? "ed4043"
+            : af.data.discord_status == "offline"
+            ? "737e8c"
+            : null
+        }`;
+        status.innerText = discordstatus.join("\n");
+      });
+  </script>
+</html>

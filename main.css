@@ -1,0 +1,84 @@
+:root{
+    --gradient: linear-gradient(94.47deg, #A85CF9 30.46%, #4B7BE5 99.9%);
+}
+
+
+
+body {
+    background-color: #111;
+    font-family: 'Google Sans', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background: url(file:///C:/Users/libun/Downloads/5927911.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+}
+
+.margin-content{
+    margin-top: 0vh;
+}
+
+.gradient-txt{
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.under-txt{
+    font-size: 20px;
+    margin: 0;
+}
+
+.pfp{
+    border-radius: 10px;
+    width: 95px;
+    height: 95px;
+}
+
+.grey-link{
+    font-size: 20px;
+    padding: 3px;
+    color: rgb(199, 197, 197);
+}
+
+.box {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 80px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  
+
+/*
+.box{
+    background-color: rgba(0, 0, 0, 0.700);
+    padding: 80px;
+    border-radius: 10px;
+}
+*/
+
+@media (max-width: 400px){
+    .box{
+        padding: 30px;
+    }
+}
+
+.inf{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
